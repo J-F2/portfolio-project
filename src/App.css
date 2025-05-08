@@ -1,0 +1,156 @@
+#root{
+  text-align: center;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 35px;
+
+  width: fit-content;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grid-element {
+  height: 280px;
+  width: 498px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgb(21, 21, 21);
+
+  background-color: #363636;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+
+  transition: transform 0.3s ease-in-out;  /* Adds smooth scaling effect */
+  transform-origin: center;  /* Ensures the element grows from the center */
+}
+.grid-element:hover {
+  transform: scale(1.1);  /* Scales the element by 1.5 times */
+  transition: transform 0.3s ease;  /* Fast grow effect */
+}
+
+.grid-element:not(:hover) {
+  transition: transform 1s ease-out;  /* Slow shrink effect */
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the div, cropping if necessary */
+}
+
+.grid-mount {
+  height: 280px;
+  width: 498px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.back-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+.back-button {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.video {
+  width: 1067px;
+  height: 600px;
+  border-radius: 10px;
+  padding: 0px;
+  margin:0px;
+}
+.video-holder {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.322);
+  height: 600px;
+  padding: 0px;
+  margin:0px;
+}
+.page-title {
+  font-size: 60px;
+  margin:20px
+}
+
+.summary {
+  padding:50px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  max-width: 1000px;
+  margin:auto
+}
+
+.element-title {
+  position: absolute;
+  color: transparent;
+  font-size: 50px;
+  text-shadow: 0px 0px 2px;
+
+
+}
+
+.grid-element:hover>.element-title {
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);  /* Scales the element by 1.5 times */
+  transition: all 0.5s ease;  /* Fast grow effect */
+}
+
+.grid-element:not(:hover)>.element-title {
+  transition: all 0.3s ease-out;  /* Slow shrink effect */
+}
+
+.grid-element:hover>img {
+  opacity: 70%;
+  transition: all 0.7s ease;  /* Fast grow effect */
+}
+
+.pdf {
+  width: 800px;
+  height: 1000px
+}
+
+.links-list {
+  list-style-type: none;
+  padding: 0;
+  line-height:3;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.video-holder img {
+  width: 1067px;
+  height: 600px;
+  border-radius: 10px;
+  padding: 0px;
+  margin:0px;
+}
